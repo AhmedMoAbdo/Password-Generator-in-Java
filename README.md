@@ -1,18 +1,37 @@
 # Password Generator
 
-## Overview
-This Java program is a Password Generator that allows users to create random passwords based on their specified criteria, including length and complexity level. By defining the complexity level (1, 2, or 3) and the desired length of the password, users can generate secure and random passwords for various purposes.
+This Java program generates random passwords based on user specifications. It offers flexibility in creating passwords with varying complexity levels and lengths.
 
-## How to Use
+#### Usage
+
 1. Run the program.
-2. Enter the desired complexity level (1, 2, or 3) when prompted.
-3. Enter the desired length of the password when prompted.
-4. The program generates a random password based on the specified criteria.
-5. The generated password is displayed on the console.
+2. Enter the type of password you want:
+   - 1: Only numbers
+   - 2: Only characters
+   - 3: Numbers and characters
+   - 4: All above with special characters
 
-## Features
-- **User Input:** Utilizes the `Scanner` class to receive user input for complexity level and password length.
-- **Random Password Generation:** Utilizes the `random()` method from the `Math` class to generate a random password based on the specified complexity level.
-- **Complexity Levels:** Defines three complexity levels, each with different character sets (uppercase, lowercase, digits, and special characters) for password generation.
-- **Loop Structure:** Iterates through the character sets to create a password of the desired length.
-- **Password Display:** Displays the generated password on the console.
+3. Enter the desired length of the password (minimum length: 8).
+
+#### Features
+
+- **generate(String a, int len):** Generates a password consisting of characters from string `a`.
+- **generate(String a, String b, int len):** Generates a password consisting of characters from strings `a` and `b`.
+- **generate(String a, String b, String c, int len):** Generates a password consisting of characters from strings `a`, `b`, and `c`.
+
+#### Example
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        PasswordGenerator.generatePassword();
+    }
+}
+```
+
+#### Note
+
+- Ensure to input a minimum password length of 8 characters.
+- The password generated may vary each time the program is executed due to the randomness involved.
+
+Feel free to explore and modify the code according to your requirements. Happy coding! 🚀
