@@ -10,7 +10,7 @@ public class PasswordGenerator {
         }
         return pass;
     }
-    
+
     public static String generate(String a, String b, int len) {
         String pass = "";
         while (len-- > 0) {
@@ -34,28 +34,33 @@ public class PasswordGenerator {
             else
                 pass += c.charAt((int) (random() * c.length()));
         }
-    
+
         return pass;
     }
 
-    public static void generatePassword()
-    {
+    public static void generatePassword() {
         Scanner in = new Scanner(System.in);
 
         int len = 0, cmplx = 0;
         System.out.print("Enter the Type of password you want (1,2,3,4):\n1: Only numbers\n2: Only Characters\n3: Numbers and Characters\n4: All above with special characters\n");
-        while (cmplx>4||cmplx<1){
+        while (cmplx > 4 || cmplx < 1) {
             cmplx = in.nextInt();
+            if (cmplx > 4 || cmplx < 1) {
+                System.out.print("Enter a valid number: ");
+            }
         }
         System.out.print("Enter the length of the password(minimum length -> 8): ");
         while (len < 8) {
             len = in.nextInt();
+            if (len < 8) {
+                System.out.print("Enter a valid length: ");
+            }
         }
 
         String[] complex = new String[3];
         complex[0] = "123456789";
         for (int i = 65; i <= 122; i++) {
-            if(i > 90 && i < 97) continue;
+            if (i > 90 && i < 97) continue;
             complex[1] += (char) i;
         }
 
@@ -71,19 +76,33 @@ public class PasswordGenerator {
                 pass = generate(complex[1], len);
                 break;
             case 3:
-                pass = generate(complex[0],complex[1], len);
+                pass = generate(complex[0], complex[1], len);
                 break;
             case 4:
-                pass = generate(complex[0],complex[1], complex[2], len);
+                pass = generate(complex[0], complex[1], complex[2], len);
                 break;
             default:
                 break;
         }
         System.out.println(pass);
+        System.out.println();
     }
 
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         generatePassword();
+
+        char c = 'n';
+        while (true) {
+            System.out.print("Do want to generate a new password? ");
+            c = in.next().charAt(0);
+            if (c == 'y' || c == 'Y') {
+                generatePassword();
+            } else {
+                System.out.println("Thanks for using this app :)");
+                break;
+            }
+        }
         return;
     }
 }
