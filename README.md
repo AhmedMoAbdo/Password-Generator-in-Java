@@ -12,12 +12,7 @@ This Java program generates random passwords based on user specifications. It of
    - 4: All above with special characters
 
 3. Enter the desired length of the password (minimum length: 8).
-
-#### Features
-
-- **generate(String a, int len):** Generates a password consisting of characters from string `a`.
-- **generate(String a, String b, int len):** Generates a password consisting of characters from strings `a` and `b`.
-- **generate(String a, String b, String c, int len):** Generates a password consisting of characters from strings `a`, `b`, and `c`.
+4. 
 
 #### Example
 
