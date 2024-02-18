@@ -28,5 +28,3 @@ public class Main {
 
 - Ensure to input a minimum password length of 8 characters.
 - The password generated may vary each time the program is executed due to the randomness involved.
-
-Feel free to explore and modify the code according to your requirements. Happy coding! 🚀
