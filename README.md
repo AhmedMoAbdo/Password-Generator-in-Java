@@ -1,30 +1,18 @@
 # Password Generator
 
-This Java program generates random passwords based on user specifications. It offers flexibility in creating passwords with varying complexity levels and lengths.
+This is a simple Java program that generates random passwords based on user input. It allows users to choose the complexity and length of the password they want.
 
-#### Usage
+## Usage
 
-1. Run the program.
-2. Enter the type of password you want:
-   - 1: Only numbers
-   - 2: Only characters
-   - 3: Numbers and characters
-   - 4: All above with special characters
+To use the password generator, follow these steps:
 
-3. Enter the desired length of the password (minimum length: 8).
-4. 
-
-#### Example
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        PasswordGenerator.generatePassword();
-    }
-}
-```
-
-#### Note
-
-- Ensure to input a minimum password length of 8 characters.
-- The password generated may vary each time the program is executed due to the randomness involved.
+1. Run the `PasswordGenerator.java` file.
+2. You will be prompted to select the type of password you want and the desired length.
+3. Choose the complexity level:
+    - Type `1` for passwords consisting of only numbers.
+    - Type `2` for passwords consisting of only characters.
+    - Type `3` for passwords consisting of both numbers and characters.
+    - Type `4` for passwords consisting of numbers, characters, and special characters.
+4. Enter the desired length of the password (minimum length: 8 characters).
+5. The program will generate a random password based on your input and display it.
+6. You can choose to generate more passwords or exit the program.
